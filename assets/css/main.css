@@ -55,6 +55,13 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+canvas {
+    position:background;
+    left:0;
+    top:0;
+    z-index:-1;
+}
+
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -2510,7 +2517,7 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 4px;
+		border-radius: 8px;
 		border: 0;
 		display: inline-block;
 		position: relative;
@@ -3380,7 +3387,7 @@ input, select, textarea {
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		width: 100%;
 		z-index: 100;
@@ -3395,9 +3402,45 @@ input, select, textarea {
 			top: 0;
 		}
 
+		#header .content {
+		    display: inline-block;
+            margin-right: 20%;
+            max-width: 100%;
+            padding: 13em;
+            position: absolute;
+            text-align: right;
+            vertical-align: middle;
+            justify: center;
+            z-index: 1;
+            margin-left: auto;
+            martgin-right: auto;
+		}
+
+		#header .content .image {
+			border-radius: 100%;
+			display: block;
+			margin-bottom: 10px;
+			height: 18em;
+			width: 18em;
+
+            martgin-right: 100%;
+		}
+
+		#header .content li {
+		    display: inline-block;
+		    justify: center;
+		    vertical-align: center;
+		}
+
+		    #header .content .image img {
+			    border-radius: 100%;
+			    display: inline-block;
+			    width: 100%;
+		    }
+
 		#header nav {
 			position: absolute;
-			right: 1em;
+			left: 10em;
 			top: 0;
 		}
 
@@ -3450,12 +3493,11 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-attachment: fixed;
+		background-attachment: absolute;
 		background-color: #272833;
-		background-image: url("../../images/banner.jpg");
 		background-position: center center;
 		background-size: cover;
-		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0);
 		min-height: 100vh;
 		position: relative;
 		text-align: center;
@@ -3511,16 +3553,16 @@ input, select, textarea {
 				}
 
 			#banner .content .image {
-				border-radius: 100%;
+				border-radius: 95%;
 				display: inline-block;
 				height: 18em;
-				margin-left: 3em;
+				margin-bottom: 10px;
 				vertical-align: middle;
 				width: 18em;
 			}
 
 				#banner .content .image img {
-					border-radius: 100%;
+					border-radius: 105%;
 					display: block;
 					width: 100%;
 				}
