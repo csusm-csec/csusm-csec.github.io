@@ -64,7 +64,6 @@ function renderWave() {
 	for (let x = 0; x < yvalues.length; x++) {
 		// Calculate the hue value based on the cell's position
 		let hue = map(x, 0, yvalues.length, 0, 255);
-
 		// Set the fill color using the hue value
 		let c = color(0, 65, hue);
 		fill(c);
@@ -72,12 +71,9 @@ function renderWave() {
 	}
 
 	for (let x = 0; x < yvalues1.length; x++) {
-    		// Calculate the hue value based on the cell's position
     	let hue = map(x, 0, yvalues1.length, 0, 255);
-
-    		// Set the fill color using the hue value
     	let c = color(200, 165, hue);
     	fill(c);
     	ellipse(x * 8, height / 2 + yvalues1[x], 16, 16);
-    	}
+    }
 }
