@@ -31,10 +31,9 @@ function draw() {
 	background(0);
 	calcWave();
 	renderWave();
-
 }
 function calcWave() {
-	// Increment theta (try different values for 'angular velocity' here
+	// Increment theta (try different values for 'angular velocity' here)
 	theta += 0.05;
 	// Set all height values to zero
 	for (let i = 0; i < yvalues.length; i++) {
@@ -48,10 +47,10 @@ function calcWave() {
 			// Every other wave is cosine instead of sine
 			if (j % 2 == 0){
 				yvalues[i] += Math.cos(x) * amplitude[j];
-				yvalues1[i] += Math.sin(x) * amplitude[j];
+				yvalues1[i] -= Math.sin(x) * amplitude[j];
 			} else {
 				yvalues[i] += Math.sin(x) * amplitude[j];
-				yvalues1[i] += Math.cos(x) * amplitude[j];
+				yvalues1[i] -= Math.cos(x) * amplitude[j];
 			}
 			x += dx[j];
 		}
@@ -62,17 +61,15 @@ function renderWave() {
 	noStroke();
 	ellipseMode(CENTER);
 	for (let x = 0; x < yvalues.length; x++) {
-		// Calculate the hue value based on the cell's position
-		let hue = map(x, 0, yvalues.length, 0, 255);
-		// Set the fill color using the hue value
-		let c = color(0, 65, hue);
+		let hue = map(x, 0, yvalues.length, 0, 232);	// Calculate the hue value based on the cell's position
+		let c = color(58, 181, hue);
 		fill(c);
 		ellipse(x * 8, height / 2 + yvalues[x], 16, 16);
 	}
 
 	for (let x = 0; x < yvalues1.length; x++) {
-    	let hue = map(x, 0, yvalues1.length, 0, 255);
-    	let c = color(200, 165, hue);
+    	let hue = map(x, 0, yvalues1.length, 0, 90);	// Calculate the hue value based on the cell's position
+    	let c = color(0, 46, hue);
     	fill(c);
     	ellipse(x * 8, height / 2 + yvalues1[x], 16, 16);
     }
