@@ -25,7 +25,6 @@ function setup() {
 		dx[i] = TWO_PI / period * 8;
 	}
 	yvalues = new Array(Math.floor(w / 8));
-	yvalues1 = new Array(Math.floor(w / 8));
 }
 function draw() {
 	background(0);
@@ -38,7 +37,6 @@ function calcWave() {
 	// Set all height values to zero
 	for (let i = 0; i < yvalues.length; i++) {
 		yvalues[i] = 0;
-		yvalues1[i] = 0;
 	}
 	// Accumulate wave height values
 	for (let j = 0; j < maxwaves; j++) {
@@ -47,10 +45,8 @@ function calcWave() {
 			// Every other wave is cosine instead of sine
 			if (j % 2 == 0){
 				yvalues[i] += Math.cos(x) * amplitude[j];
-				yvalues1[i] -= Math.sin(x) * amplitude[j];
 			} else {
-				yvalues[i] += Math.sin(x) * amplitude[j];
-				yvalues1[i] -= Math.cos(x) * amplitude[j];
+				yvalues[i] -= Math.sin(x) * amplitude[j];
 			}
 			x += dx[j];
 		}
@@ -61,16 +57,10 @@ function renderWave() {
 	noStroke();
 	ellipseMode(CENTER);
 	for (let x = 0; x < yvalues.length; x++) {
-		let hue = map(x, 0, yvalues.length, 0, 232);	// Calculate the hue value based on the cell's position
+		let hue = map(x, 0, yvalues.length, 100, 232);	// Calculate the hue value based on the cell's position
 		let c = color(58, 181, hue);
 		fill(c);
 		ellipse(x * 8, height / 2 + yvalues[x], 16, 16);
 	}
 
-	for (let x = 0; x < yvalues1.length; x++) {
-    	let hue = map(x, 0, yvalues1.length, 0, 90);	// Calculate the hue value based on the cell's position
-    	let c = color(0, 46, hue);
-    	fill(c);
-    	ellipse(x * 8, height / 2 + yvalues1[x], 16, 16);
-    }
 }

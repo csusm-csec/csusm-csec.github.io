@@ -13,21 +13,23 @@
 		<script src="assets/js/p5.min.js"></script>
 		<script src="assets/js/wave.js"></script>
 	</head>
+
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a>Welcome</a></h1>
+					<h1 id="logo">Welcome</h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="officers.html">Officers</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#schedule">Schedule</a></li>
+							<li><a href="#ctf">CTF</a></li>
 						</ul>
 					</nav>
 					<div class="content">
-						<span class="image"><img src="images/Logo2.png" alt="" /></span>
-						<div>
-							</br>
+						<span><img src="images/club_logo.png" alt="Club Logo"/></span>
+						<div class="row">
 							<li>
 								<a href="https://discord.gg/5WgReRdTMy" class="icon brands alt fa-discord button primary">Join our Discord</a>
 								<a href="https://ctf.micsec.cc/faq" class="icon regular alt fa-flag button primary">C0UG4R5 CTF</a>
@@ -37,32 +39,73 @@
 					</div>
 				</header>
 
-			<!-- One (leftover from html5 template, have to keep it or it messes up everything) -->
+			<!-- leftover from html5 template, have to keep it or else it messes up everything (im not good at front end) -->
 				<section id="banner" class="spotlight style1 bottom">
-
 				</section>
 
-			<!-- officers -->
-			<section id="two" class="spotlight style2 right">
-				<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+			<!-- about us -->
+			<section id="about" class="spotlight style2 special top">
 					<div class="content">
 						<header>
-							<h2>Club Directors</h2>
+							<h2>About us</h2>
 						</header>
-						<p>Could make this small section into multiple sections: officer section followed by an event
-						notification or embeded tweets or something neat</p>
-						<ul class="actions">
-							<li><a href="officers.html" class="button">About Us</a></li>
-						</ul>
+						<p>Our goal is to educate the campus community about the importance of online security and provide them with
+							the skills to protect themselves from potential cyber threats. The club aims to create a community of
+							like-minded individuals who share a passion for cybersecurity and work together to enhance their knowledge
+							and skills in this field. The club also provides opportunities for members to network with professionals in the industry
+							and participate in hands-on projects and competitions.</p>
+
+						<div class="card">
+							<img src="images/jt.jpg" class="card-img">
+							<p>President</p>
+							<p>Jake Tremblay</p>
+							<li>
+								<a href="https://twitter.com/soupsec" class="icon brands alt fa-twitter"></a> |
+								<a href="https://github.com/soupseeker" class="icon brands alt fa-github"></a> |
+								<a href="https://www.linkedin.com/in/jake-tremblay/" class="icon brands alt fa-linkedin-in"></a>
+							</li>
+						</div>
+
+						<div class="card">
+							<img src="images/ac.jpg" class="card-img">
+							<p>Vice President</p>
+							<p>Aidan </p>
+							<li>
+								<a href="https://twitter.com/" class="icon brands alt fa-twitter"></a> |
+								<a href="https://github.com/" class="icon brands alt fa-github"></a> |
+								<a href="https://www.linkedin.com/" class="icon brands alt fa-linkedin-in"></a>
+							</li>
+						</div>
+
+						<div class="card">
+							<img src="images/bc.jpg" class="card-img">
+							<p>Treasurer</p>
+							<p>Nicholas Johnson</p>
+							<li>
+								<a href="https://github.com/MrJohnson7" class="icon brands alt fa-github"></a> |
+								<a href="https://www.linkedin.com/in/nicholas-johnson-a8062525b/" class="icon brands alt fa-linkedin-in"></a>
+							</li>
+						</div>
+
+						<div class="card">
+							<img src="images/dc.jpg" class="card-img">
+							<p>Secretary & Social Media</p>
+							<p>Danielle Bárcena</p>
+							<li>
+								<a href="https://linktr.ee/daniellebarcena" class="icon solid alt fa-link"></a> |
+								<a href="https://www.linkedin.com/in/danielle-barcena/" class="icon brands alt fa-linkedin-in"></a>
+							</li>
+						</div>
+
 					</div>
 			</section>
 
 			<!-- schedule  -->
-			<section id="five" class="wrapper style2 special fade-up">
+			<section id="schedule" class="wrapper style2 special fade-up">
 				<div class="container">
 					<header>
 						<h2>Schedule</h2>
-						<p>Come to our next meeting!</p>
+						<p>VEP 5105 - 2:30-3:30 PM</p>
 					</header>
 					<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&src=Y3liZXJjbHViLmNzdXNtQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 3px #777" width="900" height="600" frameborder="0" scrolling="no"></iframe>
 
@@ -70,69 +113,101 @@
 			</section>
 
 			<!-- ctf  -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>C0UG4R5 CTF</h2>
-							<p>Apply as a challenge creator or join as a player!</p>
-						</header>
-						<p>Every semester the CSUSM Cybersecurity Club puts on C0UG4R5 Capture the Flag. C0UG4R5 CTF is a cybersecurity competition designed to
-						test students knowledge in categories like web exploitation, password cracking, reverse engineering, and more. We're constantly looking
-						for challenge developers, local sponsors, and new players! If you have any questions feel free to reach out.</p>
-						<ul class="actions">
-							<li><a href="https://ctf.micsec.cc/faq" class="button">CTF FAQ</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="https://forms.gle/oToKuChxRrHtRNgM8" class="button">Want to help us create C0UG4R5 CTF?</a></li>
-						</ul>
-					</div>
-				</section>
+<!--				<section id="ctf" class="spotlight style3 left">-->
+<!--					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>-->
+<!--					<div class="content">-->
+<!--						<header>-->
+<!--							<h2>C0UG4R5 CTF</h2>-->
+<!--							<p>Apply as a challenge creator or join as a player!</p>-->
+<!--						</header>-->
+<!--						<p>Every semester the CSUSM Cybersecurity Club puts on C0UG4R5 Capture the Flag. C0UG4R5 CTF is a cybersecurity competition designed to-->
+<!--						test students knowledge in categories like web exploitation, password cracking, reverse engineering, and more. We're constantly looking-->
+<!--						for challenge developers, local sponsors, and new players! If you have any questions feel free to reach out.</p>-->
+<!--						<ul class="actions">-->
+<!--							<li><a href="https://ctf.micsec.cc/faq" class="button">CTF FAQ</a></li>-->
+<!--						</ul>-->
+<!--						<ul class="actions">-->
+<!--							<li><a href="https://forms.gle/oToKuChxRrHtRNgM8" class="button">Want to help us create C0UG4R5 CTF?</a></li>-->
+<!--						</ul>-->
+<!--					</div>-->
+<!--				</section>-->
 
 
 			<!-- ctf tools -->
-			<section id="four" class="wrapper style1 special fade-up">
-				<div class="container">
+			<section id="ctf" class="spotlight style2 special bottom">
+				<div class="content">
 					<header class="major">
 						<h2>CTF Tools</h2>
 					</header>
 					<div class="box alt">
-						<div class="row gtr-uniform">
+						<div class="row">
 							<section class="col-4 col-6-medium col-12-xsmall">
 								<h3>Kali Linux</h3>
-								<span class="icon solid alt major fa-chart-area"></span>
-
+								<a href="https://www.kali.org/get-kali/">
+									<img src="images/kali.png">
+								</a>
 							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Burp Suite</h3>
-								<span class="icon solid alt major fa-comment"></span>
 
-							</section>
 							<section class="col-4 col-6-medium col-12-xsmall">
 								<h3>Docker</h3>
-								<span class="icon solid alt major fa-flask"></span>
-
-
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Hashcat</h3>
-								<span class="icon solid alt major fa-paper-plane"></span>
+								<a href="https://docs.docker.com/get-docker/">
+									<img src="images/docker.png">
+								</a>
 							</section>
 
 							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>CyberChef</h3>
-								<span class="icon solid alt major fa-file"></span>
+								<h3>Ghidra</h3>
+								<a href="https://github.com/NationalSecurityAgency/ghidra">
+									<img src="images/ghidra.png" style="width: 20%">
+								</a>
+							</section>
+
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<h3>Wireshark</h3>
+								<a href="https://www.wireshark.org/">
+									<img src="images/wireshark.png">
+								</a>
+							</section>
+
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<h3>Pwntools</h3>
+								<a href="https://github.com/Gallopsled/pwntools">
+									<img src="images/pwn.png">
+								</a>
 							</section>
 
 							<section class="col-4 col-6-medium col-12-xsmall">
 								<h3>Metasploit</h3>
-								<span class="icon solid alt major fa-lock"></span>
+								<a href="https://www.metasploit.com/">
+									<img src="images/metasploit.png" style="width: 20%">
+								</a>
+							</section>
+
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<h3>Nmap</h3>
+								<a href="https://nmap.org/">
+									<img src="images/nmap.png" style="width: 20%">
+								</a>
+							</section>
+
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<h3>Burp Suite</h3>
+								<a href="https://portswigger.net/burp">
+									<img src="images/burp.png" style="width: 20%">
+								</a>
+							</section>
+
+							<section class="col-4 col-6-medium col-12-xsmall">
+								<h3>GDB</h3>
+								<a href="https://www.sourceware.org/gdb/">
+									<img src="images/gdb.png" style="width: 40%">
+								</a>
 							</section>
 						</div>
 					</div>
 					<footer class="major">
 						<ul class="actions special">
-							<li><a href="https://www.notion.so/f5c1f32a2c504aabb4282bda6b9ec34c?v=b828d651e2d74cc4a6f9b6895afb1591" class="button">More Tools</a></li>
+							<li><a href="https://github.com/zardus/ctf-tools" class="button">More Tools</a></li>
 						</ul>
 					</footer>
 				</div>
@@ -145,10 +220,11 @@
 			-->
 				<footer id="footer">
 					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://twitter.com/csusm_csc" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="https://www.instagram.com/csusm_cybersec" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="mailto:cyberclub.csusm@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
+					<p>Interested in becoming a sponsor for our club?</p>
 					<ul class="copyright">
 						<li>&copy; CSUSM Cybersecurity Club </li>
 					</ul>
