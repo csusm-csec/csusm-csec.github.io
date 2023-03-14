@@ -62,5 +62,5 @@ function renderWave() {
 		fill(c);
 		ellipse(x * 8, height / 2 + yvalues[x], 16, 16);
 	}
-
 }
+//CSUSM{hidden_in_plain_javascript_2023spring}
