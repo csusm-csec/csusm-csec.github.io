@@ -51,10 +51,19 @@ function setup() {
 }
 
 function draw() {
-  background('#0f0f0f');
   for(let i = 0;i<particles.length;i++) {
     particles[i].createParticle();
     particles[i].moveParticle();
     particles[i].joinParticles(particles.slice(i));
   }
+}
+
+function get_flag(){
+  var a = -~-~-~-~[];
+  var i = -~[];
+  var crib = "CSUSM{j";
+  var e = 14 ^ 25;
+  var t = String.fromCharCode(348 / 3);
+  var s = String.fromCharCode(5 * 23);
+  console.log(crib + a + "v" + a + s + 'cR' + i + 'p' + t + '_' + 'm' + a + t + 'H' + '_' + t + 'H' + 0 + '_' + 'l0l}');
 }
